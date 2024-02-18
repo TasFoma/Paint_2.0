@@ -5,7 +5,7 @@ namespace Paint_2._0
         public Form1()
         {
             InitializeComponent();
-            this.Width = 900;
+            this.Width = 950;
             this.Height = 700;
             bm = new Bitmap(pic.Width, pic.Height);
             g = Graphics.FromImage(bm);
@@ -21,6 +21,9 @@ namespace Paint_2._0
         Pen erase = new Pen(Color.White, 10);
         int index;
         int x, y, sX, sY, cX, cY;
+
+        ColorDialog cd = new ColorDialog();
+        Color new_color;
 
         private void pic_MouseDown(object sender, MouseEventArgs e)
         {
@@ -122,6 +125,21 @@ namespace Paint_2._0
                 }
             }
 
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            g.Clear(Color.White);
+            pic.Image = bm;
+            index = 0;
+        }
+
+        private void btn_color_Click(object sender, EventArgs e)
+        {
+            cd.ShowDialog();
+            new_color = cd.Color;
+            pic_color.BackColor = cd.Color;
+            p.Color = cd.Color;
         }
     }
 }

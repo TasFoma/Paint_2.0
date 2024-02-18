@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btn_save = new Button();
+            btn_clear = new Button();
             color_picker = new PictureBox();
             btn_line = new Button();
             btn_rect = new Button();
@@ -41,8 +43,6 @@
             btn_color = new Button();
             panel2 = new Panel();
             pic = new PictureBox();
-            btn_clear = new Button();
-            btn_save = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)color_picker).BeginInit();
             panel3.SuspendLayout();
@@ -68,6 +68,37 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(912, 120);
             panel1.TabIndex = 0;
+            // 
+            // btn_save
+            // 
+            btn_save.BackColor = Color.YellowGreen;
+            btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
+            btn_save.FlatAppearance.MouseOverBackColor = Color.Green;
+            btn_save.FlatStyle = FlatStyle.Flat;
+            btn_save.ForeColor = Color.White;
+            btn_save.ImageAlign = ContentAlignment.TopCenter;
+            btn_save.Location = new Point(820, 22);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(84, 32);
+            btn_save.TabIndex = 11;
+            btn_save.Text = "Save";
+            btn_save.UseVisualStyleBackColor = false;
+            // 
+            // btn_clear
+            // 
+            btn_clear.BackColor = Color.YellowGreen;
+            btn_clear.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
+            btn_clear.FlatAppearance.MouseOverBackColor = Color.Green;
+            btn_clear.FlatStyle = FlatStyle.Flat;
+            btn_clear.ForeColor = Color.White;
+            btn_clear.ImageAlign = ContentAlignment.TopCenter;
+            btn_clear.Location = new Point(820, 63);
+            btn_clear.Name = "btn_clear";
+            btn_clear.Size = new Size(84, 32);
+            btn_clear.TabIndex = 10;
+            btn_clear.Text = "Clear";
+            btn_clear.UseVisualStyleBackColor = false;
+            btn_clear.Click += btn_clear_Click;
             // 
             // color_picker
             // 
@@ -220,6 +251,7 @@
             btn_color.Text = "Color";
             btn_color.TextAlign = ContentAlignment.BottomCenter;
             btn_color.UseVisualStyleBackColor = false;
+            btn_color.Click += btn_color_Click;
             // 
             // panel2
             // 
@@ -243,36 +275,6 @@
             pic.MouseDown += pic_MouseDown;
             pic.MouseMove += pic_MouseMove;
             pic.MouseUp += pic_MouseUp;
-            // 
-            // btn_clear
-            // 
-            btn_clear.BackColor = Color.YellowGreen;
-            btn_clear.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
-            btn_clear.FlatAppearance.MouseOverBackColor = Color.Green;
-            btn_clear.FlatStyle = FlatStyle.Flat;
-            btn_clear.ForeColor = Color.White;
-            btn_clear.ImageAlign = ContentAlignment.TopCenter;
-            btn_clear.Location = new Point(820, 63);
-            btn_clear.Name = "btn_clear";
-            btn_clear.Size = new Size(84, 32);
-            btn_clear.TabIndex = 10;
-            btn_clear.Text = "Clear";
-            btn_clear.UseVisualStyleBackColor = false;
-            // 
-            // btn_save
-            // 
-            btn_save.BackColor = Color.YellowGreen;
-            btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
-            btn_save.FlatAppearance.MouseOverBackColor = Color.Green;
-            btn_save.FlatStyle = FlatStyle.Flat;
-            btn_save.ForeColor = Color.White;
-            btn_save.ImageAlign = ContentAlignment.TopCenter;
-            btn_save.Location = new Point(820, 22);
-            btn_save.Name = "btn_save";
-            btn_save.Size = new Size(84, 32);
-            btn_save.TabIndex = 11;
-            btn_save.Text = "Save";
-            btn_save.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
