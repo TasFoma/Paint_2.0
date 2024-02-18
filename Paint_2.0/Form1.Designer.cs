@@ -41,6 +41,8 @@
             btn_color = new Button();
             panel2 = new Panel();
             pic = new PictureBox();
+            btn_clear = new Button();
+            btn_save = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)color_picker).BeginInit();
             panel3.SuspendLayout();
@@ -50,6 +52,8 @@
             // panel1
             // 
             panel1.BackColor = Color.YellowGreen;
+            panel1.Controls.Add(btn_save);
+            panel1.Controls.Add(btn_clear);
             panel1.Controls.Add(color_picker);
             panel1.Controls.Add(btn_line);
             panel1.Controls.Add(btn_rect);
@@ -62,7 +66,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(864, 120);
+            panel1.Size = new Size(912, 120);
             panel1.TabIndex = 0;
             // 
             // color_picker
@@ -223,7 +227,7 @@
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 492);
             panel2.Name = "panel2";
-            panel2.Size = new Size(864, 19);
+            panel2.Size = new Size(912, 19);
             panel2.TabIndex = 1;
             // 
             // pic
@@ -232,7 +236,7 @@
             pic.Dock = DockStyle.Fill;
             pic.Location = new Point(0, 0);
             pic.Name = "pic";
-            pic.Size = new Size(864, 511);
+            pic.Size = new Size(912, 511);
             pic.TabIndex = 0;
             pic.TabStop = false;
             pic.Paint += pic_Paint;
@@ -240,11 +244,41 @@
             pic.MouseMove += pic_MouseMove;
             pic.MouseUp += pic_MouseUp;
             // 
+            // btn_clear
+            // 
+            btn_clear.BackColor = Color.YellowGreen;
+            btn_clear.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
+            btn_clear.FlatAppearance.MouseOverBackColor = Color.Green;
+            btn_clear.FlatStyle = FlatStyle.Flat;
+            btn_clear.ForeColor = Color.White;
+            btn_clear.ImageAlign = ContentAlignment.TopCenter;
+            btn_clear.Location = new Point(820, 63);
+            btn_clear.Name = "btn_clear";
+            btn_clear.Size = new Size(84, 32);
+            btn_clear.TabIndex = 10;
+            btn_clear.Text = "Clear";
+            btn_clear.UseVisualStyleBackColor = false;
+            // 
+            // btn_save
+            // 
+            btn_save.BackColor = Color.YellowGreen;
+            btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
+            btn_save.FlatAppearance.MouseOverBackColor = Color.Green;
+            btn_save.FlatStyle = FlatStyle.Flat;
+            btn_save.ForeColor = Color.White;
+            btn_save.ImageAlign = ContentAlignment.TopCenter;
+            btn_save.Location = new Point(820, 22);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(84, 32);
+            btn_save.TabIndex = 11;
+            btn_save.Text = "Save";
+            btn_save.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(864, 511);
+            ClientSize = new Size(912, 511);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pic);
@@ -274,5 +308,7 @@
         private Button btn_rect;
         private Panel panel3;
         private PictureBox color_picker;
+        private Button btn_clear;
+        private Button btn_save;
     }
 }
