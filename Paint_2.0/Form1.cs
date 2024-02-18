@@ -155,6 +155,7 @@ namespace Paint_2._0
         {
             Point point = set_point(color_picker, e.Location);
             pic_color.BackColor = ((Bitmap)color_picker.Image).GetPixel(point.X, point.Y);
+            new_color = pic_color.BackColor;
             p.Color = pic_color.BackColor;
         }
         private void validate(Bitmap bm, Stack<Point> sp, int x, int y, Color old_color, Color new_color)
