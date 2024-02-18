@@ -235,6 +235,7 @@
             pic.Size = new Size(864, 511);
             pic.TabIndex = 0;
             pic.TabStop = false;
+            pic.Paint += pic_Paint;
             pic.MouseDown += pic_MouseDown;
             pic.MouseMove += pic_MouseMove;
             pic.MouseUp += pic_MouseUp;

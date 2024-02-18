@@ -74,7 +74,6 @@ namespace Paint_2._0
             if (index == 5)
             {
                 g.DrawLine(p, cX, cY, x, y);
-
             }
 
         }
@@ -101,7 +100,28 @@ namespace Paint_2._0
 
         private void btn_line_Click(object sender, EventArgs e)
         {
-            index = 5; 
+            index = 5;
+        }
+
+        private void pic_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            if (paint)
+            {
+                if (index == 3)
+                {
+                    g.DrawEllipse(p, cX, cY, sX, sY);
+                }
+                if (index == 4)
+                {
+                    g.DrawRectangle(p, cX, cY, sX, sY);
+                }
+                if (index == 5)
+                {
+                    g.DrawLine(p, cX, cY, x, y);
+                }
+            }
+
         }
     }
 }
