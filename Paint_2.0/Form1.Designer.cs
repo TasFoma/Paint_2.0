@@ -110,6 +110,7 @@
             color_picker.SizeMode = PictureBoxSizeMode.StretchImage;
             color_picker.TabIndex = 9;
             color_picker.TabStop = false;
+            color_picker.MouseClick += color_picker_MouseClick;
             // 
             // btn_line
             // 

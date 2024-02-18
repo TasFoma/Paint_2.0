@@ -124,7 +124,6 @@ namespace Paint_2._0
                     g.DrawLine(p, cX, cY, x, y);
                 }
             }
-
         }
 
         private void btn_clear_Click(object sender, EventArgs e)
@@ -140,6 +139,21 @@ namespace Paint_2._0
             new_color = cd.Color;
             pic_color.BackColor = cd.Color;
             p.Color = cd.Color;
+        }
+
+        static Point set_point(PictureBox pb, Point pt)
+        {
+            float pX = 1f * pb.Image.Width / pb.Width;
+            float pY = 1f * pb.Image.Height / pb.Height;
+            return new Point((int)(pt.X * pX), (int)(pt.Y * pY));
+
+        }
+
+        private void color_picker_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point point = set_point(color_picker, e.Location);
+            pic_color.BackColor = ((Bitmap)color_picker.Image).GetPixel(point.X, point.Y);
+            p.Color = pic_color.BackColor;
         }
     }
 }
