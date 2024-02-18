@@ -7,7 +7,7 @@ namespace Paint_2._0
             InitializeComponent();
             this.Width = 900;
             this.Height = 700;
-            bm = new Bitmap (pic.Width,pic.Height);
+            bm = new Bitmap(pic.Width, pic.Height);
             g = Graphics.FromImage(bm);
             g.Clear(Color.White);
             pic.Image = bm;
@@ -17,7 +17,49 @@ namespace Paint_2._0
         Graphics g;
         bool paint = false;
         Point px, py;
-        Pen p = new Pen(Color.Black,1);
+        Pen p = new Pen(Color.Black, 1);
+        Pen erase = new Pen(Color.White, 10);
         int index;
+
+        private void pic_MouseDown(object sender, MouseEventArgs e)
+        {
+            paint = true;
+            py = e.Location;
+        }
+
+        private void pic_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (paint)
+            {
+                if (index == 1)
+                {
+                    px = e.Location;
+                    g.DrawLine(p, px, py);
+                    py = px;
+                }
+                if (index == 2)
+                {
+                    px = e.Location;
+                    g.DrawLine(erase, px, py);
+                    py = px;
+                }
+            }
+            pic.Refresh();
+        }
+
+        private void pic_MouseUp(object sender, MouseEventArgs e)
+        {
+            paint = false;
+        }
+
+        private void btn_pencil_Click(object sender, EventArgs e)
+        {
+            index = 1;
+        }
+
+        private void btn_eraser_Click(object sender, EventArgs e)
+        {
+            index = 2;
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            color_picker = new PictureBox();
             btn_line = new Button();
             btn_rect = new Button();
             btn_ellipse = new Button();
@@ -40,11 +41,10 @@
             btn_color = new Button();
             panel2 = new Panel();
             pic = new PictureBox();
-            color_picker = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)color_picker).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)color_picker).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -64,6 +64,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(864, 120);
             panel1.TabIndex = 0;
+            // 
+            // color_picker
+            // 
+            color_picker.Image = Properties.Resources.color_palette;
+            color_picker.Location = new Point(0, -1);
+            color_picker.Name = "color_picker";
+            color_picker.Size = new Size(202, 118);
+            color_picker.SizeMode = PictureBoxSizeMode.StretchImage;
+            color_picker.TabIndex = 9;
+            color_picker.TabStop = false;
             // 
             // btn_line
             // 
@@ -132,6 +142,7 @@
             btn_eraser.Text = "Eraser";
             btn_eraser.TextAlign = ContentAlignment.BottomCenter;
             btn_eraser.UseVisualStyleBackColor = false;
+            btn_eraser.Click += btn_eraser_Click;
             // 
             // btn_pencil
             // 
@@ -149,6 +160,7 @@
             btn_pencil.Text = "Pencil";
             btn_pencil.TextAlign = ContentAlignment.BottomCenter;
             btn_pencil.UseVisualStyleBackColor = false;
+            btn_pencil.Click += btn_pencil_Click;
             // 
             // btn_fill
             // 
@@ -220,16 +232,9 @@
             pic.Size = new Size(864, 511);
             pic.TabIndex = 0;
             pic.TabStop = false;
-            // 
-            // color_picker
-            // 
-            color_picker.Image = Properties.Resources.color_palette;
-            color_picker.Location = new Point(0, -1);
-            color_picker.Name = "color_picker";
-            color_picker.Size = new Size(202, 118);
-            color_picker.SizeMode = PictureBoxSizeMode.StretchImage;
-            color_picker.TabIndex = 9;
-            color_picker.TabStop = false;
+            pic.MouseDown += pic_MouseDown;
+            pic.MouseMove += pic_MouseMove;
+            pic.MouseUp += pic_MouseUp;
             // 
             // Form1
             // 
@@ -244,9 +249,9 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)color_picker).EndInit();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pic).EndInit();
-            ((System.ComponentModel.ISupportInitialize)color_picker).EndInit();
             ResumeLayout(false);
         }
 
