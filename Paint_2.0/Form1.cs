@@ -1,3 +1,5 @@
+using System.Drawing.Imaging;
+
 namespace Paint_2._0
 {
     public partial class Form1 : Form
@@ -197,6 +199,17 @@ namespace Paint_2._0
         private void btn_fill_Click(object sender, EventArgs e)
         {
             index = 7;
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            var sfd = new SaveFileDialog();
+            sfd.Filter = "Image(*.jpg)|*.jpg|(*.*|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap btm = bm.Clone(new Rectangle(0, 0, pic.Width, pic.Height), bm.PixelFormat);
+                btm.Save(sfd.FileName,ImageFormat.Jpeg);
+            }
         }
     }
 }
