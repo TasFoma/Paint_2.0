@@ -91,6 +91,7 @@
             btn_line.Text = "Line";
             btn_line.TextAlign = ContentAlignment.BottomCenter;
             btn_line.UseVisualStyleBackColor = false;
+            btn_line.Click += btn_line_Click;
             // 
             // btn_rect
             // 
@@ -108,6 +109,7 @@
             btn_rect.Text = "Rectangle";
             btn_rect.TextAlign = ContentAlignment.BottomCenter;
             btn_rect.UseVisualStyleBackColor = false;
+            btn_rect.Click += btn_rect_Click;
             // 
             // btn_ellipse
             // 
@@ -125,6 +127,7 @@
             btn_ellipse.Text = "Ellipse";
             btn_ellipse.TextAlign = ContentAlignment.BottomCenter;
             btn_ellipse.UseVisualStyleBackColor = false;
+            btn_ellipse.Click += btn_ellipse_Click;
             // 
             // btn_eraser
             // 
