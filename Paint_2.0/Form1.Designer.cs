@@ -102,6 +102,7 @@
             // 
             // color_picker
             // 
+            color_picker.Cursor = Cursors.Hand;
             color_picker.Image = Properties.Resources.color_palette;
             color_picker.Location = new Point(0, -1);
             color_picker.Name = "color_picker";
@@ -113,6 +114,7 @@
             // btn_line
             // 
             btn_line.BackColor = Color.YellowGreen;
+            btn_line.Cursor = Cursors.Hand;
             btn_line.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
             btn_line.FlatAppearance.MouseOverBackColor = Color.Green;
             btn_line.FlatStyle = FlatStyle.Flat;
@@ -131,6 +133,7 @@
             // btn_rect
             // 
             btn_rect.BackColor = Color.YellowGreen;
+            btn_rect.Cursor = Cursors.Hand;
             btn_rect.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
             btn_rect.FlatAppearance.MouseOverBackColor = Color.Green;
             btn_rect.FlatStyle = FlatStyle.Flat;
@@ -149,6 +152,7 @@
             // btn_ellipse
             // 
             btn_ellipse.BackColor = Color.YellowGreen;
+            btn_ellipse.Cursor = Cursors.Hand;
             btn_ellipse.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
             btn_ellipse.FlatAppearance.MouseOverBackColor = Color.Green;
             btn_ellipse.FlatStyle = FlatStyle.Flat;
@@ -167,6 +171,7 @@
             // btn_eraser
             // 
             btn_eraser.BackColor = Color.YellowGreen;
+            btn_eraser.Cursor = Cursors.Hand;
             btn_eraser.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
             btn_eraser.FlatAppearance.MouseOverBackColor = Color.Green;
             btn_eraser.FlatStyle = FlatStyle.Flat;
@@ -185,6 +190,7 @@
             // btn_pencil
             // 
             btn_pencil.BackColor = Color.YellowGreen;
+            btn_pencil.Cursor = Cursors.Hand;
             btn_pencil.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
             btn_pencil.FlatAppearance.MouseOverBackColor = Color.Green;
             btn_pencil.FlatStyle = FlatStyle.Flat;
@@ -203,6 +209,7 @@
             // btn_fill
             // 
             btn_fill.BackColor = Color.YellowGreen;
+            btn_fill.Cursor = Cursors.Hand;
             btn_fill.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
             btn_fill.FlatAppearance.MouseOverBackColor = Color.Green;
             btn_fill.FlatStyle = FlatStyle.Flat;
@@ -238,6 +245,7 @@
             // btn_color
             // 
             btn_color.BackColor = Color.YellowGreen;
+            btn_color.Cursor = Cursors.Hand;
             btn_color.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
             btn_color.FlatAppearance.MouseOverBackColor = Color.Green;
             btn_color.FlatStyle = FlatStyle.Flat;
